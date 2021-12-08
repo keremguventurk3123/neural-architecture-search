@@ -2,7 +2,7 @@ import numpy as np
 import csv
 
 import tensorflow as tf
-from keras import backend as K
+import tensorflow.keras.backend as K
 from tensorflow.keras.datasets import cifar10
 from tensorflow.keras.utils import to_categorical
 
