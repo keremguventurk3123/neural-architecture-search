@@ -2,7 +2,7 @@ import numpy as np
 import csv
 
 import tensorflow as tf
-from tensorflow.keras import backend as K
+from keras import backend as K
 from tensorflow.keras.datasets import cifar10
 from tensorflow.keras.utils import to_categorical
 
@@ -12,7 +12,7 @@ from model import model_fn
 
 # create a shared session between Keras and Tensorflow
 policy_sess = tf.compat.v1.Session()
-K.set_session(policy_sess)
+K.tensorflow_backend.set_session(policy_sess)
 
 NUM_LAYERS = 4  # number of layers of the state space
 MAX_TRIALS = 250  # maximum number of models generated
